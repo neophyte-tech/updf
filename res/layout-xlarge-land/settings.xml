@@ -1,0 +1,158 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+        
+    <LinearLayout        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+        
+        <ListView
+            android:layout_weight="60"
+		    android:id="@+id/left_drawer"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:choiceMode="singleChoice"
+		    android:divider="#0098d4"
+		    android:dividerHeight="2dp"
+		    android:background="@android:color/white" />
+        
+        <LinearLayout
+            android:id="@+id/llHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:background="#eee"
+            android:orientation="vertical"
+            android:visibility="visible" >
+            
+		<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+	
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:padding="20dp"
+        android:orientation="horizontal" >
+    
+	    <CheckBox
+	        android:id="@+id/cbFile"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:checked="true" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="10dp"
+	        android:text="Save to the same directory as that of the source file"
+	        android:ellipsize="end"
+	        android:textColor="@android:color/black"
+	        android:textSize="16sp" >
+	    </TextView>
+    </LinearLayout>
+    
+    <View
+        android:layout_width="fill_parent"
+	    android:layout_height="2dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:background="#0098d4" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Fallback SAVE Directory"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" >
+	</TextView>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp" 
+        android:paddingBottom="20dp" 
+        android:orientation="horizontal" >   
+    
+	    <EditText
+	        android:layout_width="280dp"
+	        android:layout_height="wrap_content"
+	        android:hint="/sdcard"
+	        android:imeOptions="actionNext"
+	        android:ems="10" 
+	        android:inputType="text" ></EditText>
+	    
+	    <Button
+            android:id="@+id/bPick"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top"
+            android:layout_margin="5dp"
+            android:background="#0086a3"
+            android:textColor="#fff"
+            android:text="@string/pick"
+            android:textSize="16sp" />    
+    </LinearLayout>
+    
+    <View
+        android:layout_width="fill_parent"
+	    android:layout_height="2dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:background="#0098d4" />
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:padding="20dp" 
+        android:orientation="vertical" >
+    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Port to Serve on"
+	        android:ellipsize="end"
+	        android:textColor="@android:color/black"
+	        android:textSize="16sp" >
+	    </TextView>
+	    
+	    <EditText
+	        android:layout_width="280dp"
+	        android:layout_height="wrap_content"
+	        android:hint="Number"
+	        android:imeOptions="actionNext"
+			android:paddingTop="20dp"
+	        android:ems="10" 
+	        android:inputType="text" ></EditText>
+    </LinearLayout>
+    
+    <View
+        android:layout_width="fill_parent"
+	    android:layout_height="2dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:background="#0098d4" />
+    
+    <Button
+        android:id="@+id/bSaveSettings" 
+		android:layout_width="match_parent"
+		android:layout_height="45dp" 
+		android:layout_gravity="center"
+		android:layout_margin="30dp"
+		android:background="#0086a3"
+		android:textColor="#fff"
+		android:text="@string/save_settings"
+		android:textSize="16sp"/>        
+    </LinearLayout>
+	    </LinearLayout>
+	</LinearLayout>
+</android.support.v4.widget.DrawerLayout>

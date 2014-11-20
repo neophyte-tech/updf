@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="#eee"
+	android:orientation="vertical" >
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:padding="20dp"
+	        android:orientation="horizontal">
+
+	        <CheckBox
+		        android:id="@+id/cbSameDir"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:checked="true" />
+
+		    <TextView
+		        android:id="@+id/tvSameDir"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:padding="10dp"
+		        android:text="@string/settings_save_to_same_dir"
+		        android:ellipsize="end"
+		        android:textColor="@android:color/black"
+		        android:textSize="16dp"/>
+	    </LinearLayout>
+	    
+	    <View
+	        android:layout_width="fill_parent"
+		    android:layout_height="2dp"
+		    android:background="#0098d4" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="15dp"
+	        android:text="@string/settings_fallback_dir"
+	        android:textColor="@android:color/black"
+	        android:textSize="16dp" >
+		</TextView>
+	    
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp" 
+	        android:layout_marginLeft="20dp" 
+	        android:layout_marginRight="20dp" 
+	        android:paddingBottom="20dp" 
+	        android:orientation="horizontal">   
+	    
+		    <EditText
+		        android:id="@+id/etFallback"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:hint="/sdcard"
+		        android:ems="8"
+		        android:textSize="14dp"
+		        android:lines="1"
+		        android:singleLine="true"
+		        android:scrollHorizontally="true"
+		        android:ellipsize="start"
+		        android:focusable="false"
+		        android:editable="false"
+		        android:inputType="none" />
+		    
+		    <Button
+	            android:id="@+id/bPick"            
+	            android:layout_width="wrap_content"
+	            android:layout_height="40dp"
+	            android:layout_marginLeft="10dp"
+	            android:background="#0086a3"
+	            android:textColor="#fff"
+	            android:text="@string/pick"
+	            android:textSize="16dp" />    
+	    </LinearLayout>
+	    
+	    <View
+	        android:layout_width="fill_parent"
+		    android:layout_height="2dp"
+		    android:background="#0098d4" />
+	    
+	   <!-- <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="25dp" 
+	        android:layout_marginLeft="20dp" 
+	        android:layout_marginRight="20dp" 
+	        android:layout_marginBottom="20dp""
+	        android:orientation="horizontal" >
+
+		    <EditText
+		        android:layout_width="100dp"
+		        android:layout_height="wrap_content"
+		        android:hint="9876"
+		        android:maxLength="5"
+		        android:imeOptions="actionNext"
+		        android:ems="10"
+		       	android:textSize="16dp"
+		        android:inputType="number" />
+
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="10dp"
+		        android:text="@string/settings_tcp_port"
+		        android:textColor="@android:color/black"
+		        android:textSize="16dp" />
+	    </LinearLayout>
+	    
+	    <View
+	        android:layout_width="fill_parent"
+		    android:layout_height="2dp"
+		    android:background="#0098d4" /> -->
+	    
+	    <Button
+	        android:id="@+id/bSaveSettings" 
+			android:layout_width="match_parent"
+			android:layout_height="45dp" 
+			android:layout_gravity="center"
+			android:layout_margin="30dp"
+			android:background="#0086a3"
+			android:textColor="#fff"
+			android:text="@string/save_settings"
+			android:textSize="16dp"/>
+    </LinearLayout>
+</ScrollView>

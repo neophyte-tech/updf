@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.neoandroid.updfv2"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+    <supports-screens android:resizeable="true" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="in.neoandroid.updfv2.UPDFActivity"
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/ultimate_pdf_conv" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.htm" />
+                <data android:pathPattern=".*\\.html" />
+                <data android:pathPattern=".*\\.jpg" />
+                <data android:pathPattern=".*\\.png" />
+                <data android:pathPattern=".*\\.odt" />
+                <data android:pathPattern=".*\\.ods" />
+                <data android:pathPattern=".*\\.odp" />
+                <data android:pathPattern=".*\\.odd" />
+                <data android:pathPattern=".*\\.doc" />
+                <data android:pathPattern=".*\\.docx" />
+                <data android:pathPattern=".*\\.ppt" />
+                <data android:pathPattern=".*\\.pptx" />
+                <data android:pathPattern=".*\\.xls" />
+                <data android:pathPattern=".*\\.xlsx" />
+                <data android:pathPattern=".*\\.txt" />
+                <data android:pathPattern=".*\\.xml" />
+                <data android:pathPattern=".*\\.sdw" />
+                <data android:pathPattern=".*\\.sxw" />
+                <data android:pathPattern=".*\\.stw" />
+                <data android:pathPattern=".*\\.vor" />
+                <data android:pathPattern=".*\\.eps" />
+                <data android:pathPattern=".*\\.emf" />
+                <data android:pathPattern=".*\\.ppm" />
+                <data android:pathPattern=".*\\.ras" />
+                <data android:pathPattern=".*\\.sxd" />
+                <data android:pathPattern=".*\\.xpm" />
+                <data android:pathPattern=".*\\.bmp" />
+            </intent-filter>
+        </activity>            
+        <activity
+            android:name="in.neoandroid.neofilepicker.NeoFilePicker"
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+        <service android:name="in.neoandroid.updfv2.service.ConverterService" />
+
+        <activity
+        	android:name="com.google.android.gms.ads.AdActivity"
+        	android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />       
+    </application>
+
+</manifest>

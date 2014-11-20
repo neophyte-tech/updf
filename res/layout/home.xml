@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/llHome"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:visibility="visible"
+	android:orientation="vertical"
+	android:background="#eee" >
+	
+	<Button 
+	 android:id="@+id/bConvFileToPdf" 
+	 android:layout_width="match_parent"
+	 android:layout_height="45dp" 
+	 android:layout_gravity="center"
+	 android:layout_margin="30dp"
+	 android:background="#0086a3"
+	 android:textColor="#fff"
+	 android:text="@string/convfile_to_pdf"
+	 android:textSize="16dp" />
+	
+	<TextView 
+	    android:id="@+id/tvInformation"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginLeft="20dp"
+	    android:paddingTop="16dp"
+	    android:paddingBottom="15dp"
+	    android:textColor="#0098d4"
+	    android:alpha="1"
+	    android:text="@string/information" 
+	    android:textSize="18dp"
+	    android:textStyle="bold" />
+	
+	<View
+	    android:layout_width="200dp"
+	    android:layout_height="2dp"
+	    android:background="#0098d4" />
+	
+	<TextView 
+	    android:id="@+id/tvDetailedInfo"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="18dp" 
+	    android:alpha="1"
+	    android:layout_gravity="left"
+	    android:textColor="#000"
+	    android:textSize="18dp"
+	    android:text="@string/detailed_info" />
+</LinearLayout>

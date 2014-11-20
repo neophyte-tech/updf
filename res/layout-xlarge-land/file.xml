@@ -1,0 +1,50 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:background="#eee"
+    android:orientation="horizontal" >
+
+   <LinearLayout
+       android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent" >
+	
+	        <TextView
+	            android:id="@+id/tvFileName"
+	            android:layout_weight="5"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:gravity="left"
+		        android:padding="18dp"
+		        android:lines="1"
+		        android:text="File name"
+		        android:textColor="#0098d4"
+		        android:textSize="18dp"
+		        android:textStyle="bold" />
+	
+		    <TextView
+		        android:id="@+id/tvServerInfo"
+		        android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="18dp"
+                android:lines="1"
+                android:text="Server Info"
+                android:textColor="#0098d4"                
+                android:textSize="18dp"
+                android:textStyle="bold" />
+	    </LinearLayout>
+	    <View
+	        android:layout_height="2dp"
+	        android:layout_width="fill_parent"
+	        android:background="#0098d4" />
+    </LinearLayout>
+</TableRow>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ultimate PDF Converter</string>
+    <string name="menu_settings">Settings</string>
+    <string name="ultimate_pdf_conv">Ultimate PDF Converter</string>
+    <string name="convfile_to_pdf">Convert File to PDF</string>
+    <string name="conv_more_files">+ Convert More Files</string>
+    <string name="view_queued_files">View Queued Files</string>
+    <string name="pick">Pick</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="menu">Menu</string>
+    <string name="drawer_open">Do something else?</string>
+    <string name="drawer_close">Close menu</string>
+    <string name="settings_save_to_same_dir">Save to the same directory as that of the source file</string>
+    <string name="settings_fallback_dir">Fallback directory to save to&#8230;</string>
+    <string name="settings_tcp_port">TCP port to serve on</string>
+    <string name="queue_empty">File queue is empty, choose a file to convert&#8230;</string>
+    <string name="conv_empty">No converted files, choose a file to convert&#8230;</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="sure_queue">Are you sure you want to remove the file from queue?</string>
+    <string name="sure_conv">Are you sure you want to remove the file from list?</string>
+    <string name="conv_error">Conversion Error</string>
+    <string name="error_no_viewer">No PDF Viewers found :(</string>
+    <string name="error_conv_filenotfound">Converted file not found!</string>
+    <string name="admob_id">ca-app-pub-5167657072112209/4518195418</string>
+    <string name="admob_id2">ca-app-pub-5167657072112209/2225707018</string>
+    <string name="information">Information</string>
+    <string name="detailed_info">* Ultimate PDF Converted is an open source mobile application.
+        \n\n* The conversion happens in the background and you can queue multiple files for conversion as well.
+        \n\n* Click on the \'Convert File to PDF\' above to pick a file to convert.
+        \n\n* You can also \'share\' a file from another application with this app to queue the file for conversion.
+    	\n\n* This application is Ad funded, to keep our servers running.</string>
+    
+    <string-array name="menuArray">  
+        <item>Home</item>  
+        <item>Pick File to Convert</item>  
+        <item>Converted PDFs</item>  
+        <item>Queued Files</item>  
+        <item>Settings</item>
+        <item>Update / Rate App</item>
+        <item>Share UPDFv2 App</item>
+    </string-array>  
+</resources>

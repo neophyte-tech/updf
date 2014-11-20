@@ -1,0 +1,75 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="9dp" 
+    android:background="#0098d4"
+    android:paddingBottom="2dp" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:paddingTop="2dp" >
+        
+	    <RelativeLayout
+	        android:id="@+id/rLayout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="54dp"
+	        android:background="#fff"
+	        android:orientation="vertical">
+
+	        <ImageView
+	            android:id="@+id/folderimg"
+	            android:layout_width="49dp"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="3dp" />
+	      
+	        <ImageView
+	            android:id="@+id/tickmarkimg"
+	            android:layout_width="49dp"
+	            android:layout_height="17dp"
+	            android:layout_marginLeft="3dp"
+	            android:layout_marginTop="17dp"
+	            android:visibility="invisible"
+	            android:src="@drawable/check_mark"  />       
+	    </RelativeLayout>
+   
+	    <TextView
+	        android:id="@+id/tv_size"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginRight="29dp"
+	        android:text="size"
+	        android:textSize="17sp"
+	        android:textStyle="bold" />
+
+	    <TextView
+	        android:id="@+id/tv_filename"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="text"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="#222222"
+	        android:layout_marginLeft="59dp"
+	        android:textSize="17sp"
+	        android:textStyle="bold" 
+	        android:ellipsize="end"  
+	        android:singleLine="true"
+	        android:maxLines="1" />
+
+	    <TextView
+	        android:id="@+id/tv_file_date"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginLeft="59dp"
+	        android:textSize="14sp"
+	        android:text="Date" />        
+	</RelativeLayout>   
+</TableRow>
