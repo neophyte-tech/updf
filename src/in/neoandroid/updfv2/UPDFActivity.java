@@ -191,7 +191,7 @@ public class UPDFActivity extends ActionBarActivity {
     }
 	
 	private void initializeDeviceID() {
-		if(Util.prefGetDeviceID(this).length() > 0)
+		if(Util.prefGetDeviceID(this).length() <= 0)
 			Util.prefSetDeviceID(this, getNewDeviceId());
 	}
 	

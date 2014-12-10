@@ -1,6 +1,7 @@
 package in.neoandroid.updfv2.database;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -71,6 +72,8 @@ public class QueueDB extends SQLiteOpenHelper {
 	}
 	
 	public long queueFile(String filename, String extension, String path) {
+		if(sdb == null)
+			return 0;
 		ContentValues cv = new ContentValues();
 		cv.put(KEY_FILENAME, filename);
 		cv.put(KEY_EXTENSION, extension);
@@ -79,7 +82,8 @@ public class QueueDB extends SQLiteOpenHelper {
 	}
 
 	public void deleteFile(int id) {
-		sdb.delete(TABLE, "_id = ?", new String[] { String.valueOf(id) });
+		if(sdb != null)
+			sdb.delete(TABLE, "_id = ?", new String[] { String.valueOf(id) });
 	}
 
 	public ArrayList<FileDetails> getQueuedFiles() {
@@ -87,7 +91,9 @@ public class QueueDB extends SQLiteOpenHelper {
     }
 
 	public ArrayList<FileDetails> getConvertedFiles() {
-        return getFilesWithStatus(FileDetails.STATUS.QUEUED.ordinal(), true, null);
+		ArrayList<FileDetails> files = getFilesWithStatus(FileDetails.STATUS.QUEUED.ordinal(), true, null);
+		Collections.reverse(files);
+		return files;
     }
 	
 	public FileDetails getFirstFile() {
@@ -98,6 +104,8 @@ public class QueueDB extends SQLiteOpenHelper {
 	}
 
 	public int updateStatus(FileDetails details) {
+		if(sdb == null)
+			return 0;
 		ContentValues cv = new ContentValues();
 		cv.put(KEY_SAVED_AS, details.saved_as);
 		cv.put(KEY_STATUS, details.status);
@@ -107,6 +115,8 @@ public class QueueDB extends SQLiteOpenHelper {
 
 	private ArrayList<FileDetails> getFilesWithStatus(int status, boolean bNotEqual, String limit) {
 		ArrayList<FileDetails> ret = new ArrayList<FileDetails>();
+		if(sdb == null)
+			return ret;
 		String selection = KEY_STATUS + "= ?";
 		if(bNotEqual)
 			selection = KEY_STATUS + "<> ?";
