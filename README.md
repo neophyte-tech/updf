@@ -1,4 +1,4 @@
-Ultimate PDF Converter v2
+Ultimate PDF Converter v2 (Android)
 =========================
 
 Published on Google Play Store as https://play.google.com/store/apps/details?id=in.neoandroid.updfv2
